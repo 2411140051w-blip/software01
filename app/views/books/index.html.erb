@@ -1,0 +1,11 @@
+<h2>蔵書アプリ</h2>
+<hr>
+<% @books.each do |book| %>
+  <p>タイトル：<%= book.title %></p>
+  <p>著者：<%= book.author %></p>
+  <%= link_to '削除', "/books/#{book.id}", data: {turbo_method: :delete} %>
+  <%= link_to '表示', "/books/#{book.id}" %>
+  <%= link_to '編集', "/books/#{book.id}/edit" %>
+  <hr>
+<% end %>
+<p><%= link_to '新規追加', '/books/new' %></p>

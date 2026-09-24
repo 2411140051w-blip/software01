@@ -1,0 +1,16 @@
+<h3>新規追加</h3>
+<%= form_with model: @book do |f| %>
+  <p>
+  <%= f.label :title, 'タイトル' %>
+  <%= f.text_field :title %>
+  </p>
+  <p>
+  <%= f.label :author, '著者' %>
+  <%= f.text_field :author %>
+  </p>
+  <p>
+  <%= f.label :published_year, '発刊年' %>
+  <%= f.text_field :published_year %>
+  </p>
+  <%= f.submit '登録' %>
+<% end %>
