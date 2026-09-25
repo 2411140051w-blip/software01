@@ -1,5 +1,11 @@
 <h2>蔵書アプリ</h2>
 <hr>
+
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+    <hr>
+<% end %>
+
 <% @books.each do |book| %>
   <p>タイトル：<%= book.title %></p>
   <p>著者：<%= book.author %></p>

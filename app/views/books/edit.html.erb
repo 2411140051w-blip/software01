@@ -1,4 +1,15 @@
 <h3>編集</h3>
+<hr>
+<% if @book.errors.present? %>
+<h3>エラーがあります。</h3>
+<ul>
+  <% @book.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<hr>
+<% end %>
+
 <%= form_with model: @book do |f| %>
   <p>
   <%= f.label :title, 'タイトル' %>
