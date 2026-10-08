@@ -1,9 +1,9 @@
-<h2>蔵書アプリ</h2>
-<hr>
+<div id="content">
+<hr class="hr1">
 
 <% if flash[:notice] %>
     <%= flash[:notice] %>
-    <hr>
+    <hr class="hr1">
 <% end %>
 
 <% @books.each do |book| %>
@@ -12,6 +12,7 @@
   <%= link_to '削除', "/books/#{book.id}", data: {turbo_method: :delete} %>
   <%= link_to '表示', "/books/#{book.id}" %>
   <%= link_to '編集', "/books/#{book.id}/edit" %>
-  <hr>
+  <hr class="hr1">
 <% end %>
-<p><%= link_to '新規追加', '/books/new' %></p>
+<p><%= link_to '新規追加', new_book_path, class:"btn btn-secondary text-dark" %></p>
+</div>
