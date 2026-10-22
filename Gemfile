@@ -66,7 +66,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "json", "< 3"
+gem "json", "< 4"
 
 gem 'rails-i18n'
 
